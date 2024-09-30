@@ -1,30 +1,18 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# yoyo-be
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+**yoyo-be** is a NestJS application with a MongoDB database. It provides API endpoints to manage user-submitted posts, including retrieving, approving, and rejecting posts.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## Features
 
-## Description
+- **Retrieve Posts**: Get all user-submitted posts.
+- **Approve/Reject Posts**: Endpoints for moderators to approve or reject posts.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## Project Structure
+
+The app is structured into the following key features:
+- **Feed Resource**: Handles API requests for posts and connects with MongoDB for storage and retrieval.
+- **MongoDB Integration**: Stores posts and their approval status.
+- **CRUD Operations**: Implemented for managing the feed (Create, Read, Update, Delete).
 
 ## Project setup
 
@@ -58,6 +46,41 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
+## Approach
+
+### 1. Requirement Breakdown
+
+The first step involved reading and understanding the project requirements. I then broke them down into smaller tasks to simplify the development process.
+
+### 2. Project Initialization
+
+I initialized the project using NestJS and set up the necessary environment and configuration files. Next, I installed all required packages, including:
+- NestJS modules (for API management)
+- Mongoose (for MongoDB integration)
+
+### 3. Resource Generation
+
+I generated a resource for the "Feed" feature using NestJS's CLI, which provided the scaffolding for the controller, service, and module. These handle the logic for retrieving, approving, and rejecting posts.
+
+### 4. MongoDB Connection
+
+I connected the app to a MongoDB instance using the Mongoose package, which allows for interaction with the database. This enabled full CRUD operations for the feed.
+
+### 5. CRUD Implementation
+
+Finally, I implemented the CRUD operations for managing the feed:
+- **Create**: New posts can be submitted.
+- **Read**: Posts can be retrieved.
+- **Update**: Posts can be approved or rejected.
+- **Delete**: Posts can be deleted if necessary.
+
+## Built With
+
+- [NestJS](https://nestjs.com/)
+- [MongoDB](https://www.mongodb.com/)
+- [Mongoose](https://mongoosejs.com/)
+- [npm](https://www.npmjs.com/)
+
 ## Resources
 
 Check out a few resources that may come in handy when working with NestJS:
@@ -83,3 +106,6 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+```
+
+This README explains the structure and functionality of your backend application, guiding developers on setup, usage, and your approach to building the project. Adjust the details as necessary for your specific setup.
